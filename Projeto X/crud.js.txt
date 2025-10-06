@@ -1,0 +1,17 @@
+import connection from './bs;js'
+
+export class Crud {
+
+	//Metodo - seleção
+	async inserir() {
+		let conn = await connection()
+
+		let [row] = con.query('select * from paciente')
+		console.log('Pacientes cadastrados!' + rows) 
+
+	} catch (error) {
+		console.log('erro de seleção)
+		conn.end()
+	}
+
+}
